@@ -8,8 +8,8 @@ __pycache__/
 *.pyc
 node_modules/
 .next/
+*.tsbuildinfo
 dist/
 build/
 coverage/
 data/
-
