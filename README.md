@@ -4,9 +4,9 @@ AI Support Copilot is an internal knowledge assistant that lets teams upload doc
 
 ## Scope today
 
-Today this repository contains only the project structure.
+Today this repository contains the project structure plus the first implemented feature: document upload.
 
-No feature implementation is being committed yet. The goal is to create a clean, production-shaped scaffold so we can build one part at a time.
+The rest of the product is still being built one feature at a time.
 
 ## Target product
 
@@ -62,13 +62,13 @@ Planned core functions:
 └── .github/workflows/   basic validation workflow
 ```
 
-## What is scaffolded
+## What is implemented
 
-- FastAPI app entrypoint and route module
-- Next.js app shell and page structure
-- backend layer folders for API, services, schemas, models, and DB
-- Docker, CI, and Terraform placeholders
-- environment example and repo hygiene files
+- document upload endpoint in FastAPI
+- local file storage for uploaded documents
+- upload metadata index for listing uploaded files
+- Next.js upload page connected to the backend
+- app shell, backend layers, Docker, CI, and Terraform placeholders
 
 ## Local development
 
@@ -78,7 +78,7 @@ Planned core functions:
 cp .env.example .env
 ```
 
-### 2. Start the structure scaffold
+### 2. Start the app
 
 ```bash
 docker compose up --build
@@ -112,12 +112,12 @@ npm run dev
 
 ## Suggested build order
 
-1. Document upload
-2. Document processing
-3. Semantic retrieval
-4. Answer generation
-5. Citations
-6. Admin management
+1. Document processing
+2. Semantic retrieval
+3. Answer generation
+4. Citations
+5. Admin management
+6. Auth
 
 ## Planned next
 
@@ -137,3 +137,4 @@ This repo demonstrates:
 - production-minded repo structure
 - realistic stack selection
 - clear separation of frontend, backend, and infra concerns
+- incremental delivery with a working first slice
